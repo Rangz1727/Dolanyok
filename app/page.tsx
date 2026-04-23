@@ -25,7 +25,7 @@ export default function Home() {
 
   // List foto untuk slider
   const heroImages = [
-    "/DOLAN YOK GROUP.PNG",
+    "/DOLANYOKGROUP.PNG",
     "/footage/ft1.jpeg", 
     "/footage/ft2.jpeg"      
   ];
