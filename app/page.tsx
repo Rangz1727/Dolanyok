@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { motion, AnimatePresence } from "framer-motion";
+
 import Navbar from "./components/ui/Navbar";
 import Stats from "./components/sections/Stats";
 import Features from "./components/sections/Features";
@@ -24,7 +25,7 @@ export default function Home() {
 
   // List foto untuk slider
   const heroImages = [
-    "/logody.jpeg",
+    "/DOLAN YOK GROUP.PNG",
     "/footage/ft1.jpeg", 
     "/footage/ft2.jpeg"      
   ];
@@ -37,7 +38,6 @@ export default function Home() {
       easing: 'ease-out-quad'
     });
 
-    // Timer untuk auto slide manual agar transisi lebih terkontrol
     const timer = setInterval(() => {
       setCurrentImg((prev) => (prev + 1) % heroImages.length);
     }, 4000);
@@ -67,7 +67,6 @@ export default function Home() {
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#00f7a7]/10 blur-[120px] rounded-full pointer-events-none"></div>
 
         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12 md:gap-20 relative z-10">
-          {/* TEKS KIRI */}
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -89,7 +88,7 @@ export default function Home() {
             </div>
 
             <p className="text-emerald-50/70 text-lg leading-relaxed mb-10 max-w-xl">
-              Bagi kami, setiap brand punya cerita unik yang layak dicicipi dunia. Kami bukan sekadar agensi iklan; kami adalah mitra yang tumbuh bersama Anda. Dengan keahlian di bidang produksi video estetik, pengelolaan media sosial, serta strategi distribusi media yang tajam, kami siap membawa bisnis kuliner Anda ke level berikutnya. Yuk, ngobrol bareng, kita racik kesuksesan luar biasa bersama-sama!
+              Halo, perkenalkan kami Dolan Yok. Kami adalah media Lifestyle & City Guide. Melalui platform Instagram, TikTok, dan YouTube, kami menghadirkan konten video yang informatif, jujur, dan relevan dengan tren audiens saat ini.
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="/portfolio" className="bg-black/30 hover:bg-black/50 border border-white/20 px-8 py-4 rounded-2xl font-bold transition-all text-white flex items-center gap-2 tracking-widest text-xs uppercase">
@@ -101,7 +100,6 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* PHOTO SLIDER KANAN (DIPERBARUI) */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -109,8 +107,6 @@ export default function Home() {
             className="lg:w-2/5 order-1 lg:order-2 relative group flex justify-center w-full"
           >
             <div className="absolute -inset-10 bg-[#00f7a7] rounded-full blur-[100px] opacity-20 group-hover:opacity-30 transition-opacity duration-700"></div>
-            
-            {/* Box Slider dengan Aspect Ratio Terkunci agar foto ngepas */}
             <div className="relative border-4 border-white rounded-[3rem] overflow-hidden shadow-2xl bg-slate-800 w-full max-w-[380px] aspect-[4/5]">
               <AnimatePresence mode="wait">
                 <motion.img
@@ -123,14 +119,9 @@ export default function Home() {
                   className="w-full h-full object-cover" 
                 />
               </AnimatePresence>
-
-              {/* Indicator Dots */}
               <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
                 {heroImages.map((_, i) => (
-                  <div 
-                    key={i}
-                    className={`h-1.5 rounded-full transition-all duration-500 ${i === currentImg ? "w-6 bg-[#00f7a7]" : "w-2 bg-white/30"}`}
-                  />
+                  <div key={i} className={`h-1.5 rounded-full transition-all duration-500 ${i === currentImg ? "w-6 bg-[#00f7a7]" : "w-2 bg-white/30"}`} />
                 ))}
               </div>
             </div>
@@ -165,7 +156,7 @@ export default function Home() {
             </div>
             <div className="flex justify-center relative">
                <div className="w-full max-w-[300px] aspect-square rounded-full bg-[#06373a]/5 absolute blur-3xl -z-10"></div>
-               <img src="/profileabt.jpeg" alt="Team Dolan Yok" className="w-full max-w-[450px] object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.1)]"/>
+               <img src="/aifto.png" alt="Team Dolan Yok" className="w-full max-w-[450px] object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.1)]"/>
             </div>
             <div className="text-slate-600 text-sm md:text-base leading-relaxed space-y-6 lg:text-right text-justify">
               <p>Dengan pendekatan visual menarik dan storytelling autentik, kami membantu brand menjangkau audiens lebih luas, meningkatkan awareness, dan membangun kepercayaan konsumen secara natural.</p>
@@ -206,7 +197,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20 text-left">
             <div className="lg:col-span-1">
-              <div className="text-3xl font-black text-white mb-6 uppercase tracking-tighter font-sans">Dolan Yok Group<span className="text-[#00f7a7]"></span></div>
+              <div className="text-3xl font-black text-white mb-6 uppercase tracking-tighter font-sans">Dolan Yok Group<span className="text-[#00f7a7]">.</span></div>
               <p className="text-slate-400 text-sm leading-relaxed mb-8">Platform media gaya hidup terdepan di Jawa Timur. Menghubungkan brand dengan audiens lewat kurasi pengalaman terbaik.</p>
               
               <div className="mb-8 p-4 bg-red-600/5 rounded-2xl border border-red-600/20 group hover:bg-red-600/10 transition-all">
@@ -215,7 +206,10 @@ export default function Home() {
                     <span className="text-[9px] font-bold text-red-500 uppercase tracking-[0.2em] block mb-1 font-sans">Production Hub</span>
                     <h5 className="text-white font-bold text-xs uppercase tracking-wider font-sans">Dolan Yok Nusantara</h5>
                   </div>
-                  <a href="https://youtube.com/@dolanyoknusantara" className="p-2 bg-red-600 rounded-lg text-white hover:scale-110 transition-transform text-xs font-bold font-sans">YT</a>
+                  {/* IKON YOUTUBE SVG */}
+                  <a href="https://youtube.com/@dolanyoknusantara" target="_blank" className="p-2 bg-red-600 rounded-lg text-white hover:scale-110 transition-transform flex items-center justify-center">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                  </a>
                 </div>
               </div>
 
@@ -223,15 +217,25 @@ export default function Home() {
                 <div className="space-y-2">
                   <span className="text-[10px] font-bold text-blue-400 uppercase tracking-widest block font-sans">Surabaya</span>
                   <div className="flex gap-2 font-sans">
-                    <a href="#" className="p-2 bg-slate-900 rounded-lg text-slate-500 hover:text-white transition-all text-[8px] font-bold">IG</a>
-                    <a href="#" className="p-2 bg-slate-900 rounded-lg text-slate-500 hover:text-white transition-all text-[8px] font-bold">TK</a>
+                    {/* IKON INSTAGRAM SVG */}
+                    <a href="https://www.instagram.com/dolanyok.sub/" target="_blank" className="p-2 bg-slate-900 rounded-lg text-slate-500 hover:text-white transition-all flex items-center justify-center">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    {/* IKON TIKTOK SVG */}
+                    <a href="https://www.tiktok.com/@dolanyok.sub" target="_blank" className="p-2 bg-slate-900 rounded-lg text-slate-500 hover:text-white transition-all flex items-center justify-center">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+                    </a>
                   </div>
                 </div>
                 <div className="space-y-2">
                   <span className="text-[10px] font-bold text-[#00f7a7] uppercase tracking-widest block font-sans">Malang</span>
                   <div className="flex gap-2 font-sans">
-                    <a href="#" className="p-2 bg-slate-900 rounded-lg text-slate-500 hover:text-white transition-all text-[8px] font-bold">IG</a>
-                    <a href="#" className="p-2 bg-slate-900 rounded-lg text-slate-500 hover:text-white transition-all text-[8px] font-bold">TK</a>
+                    <a href="https://www.instagram.com/dolanyok.malang/" target="_blank" className="p-2 bg-slate-900 rounded-lg text-slate-500 hover:text-white transition-all flex items-center justify-center">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@dolanyok.malang" target="_blank" className="p-2 bg-slate-900 rounded-lg text-slate-500 hover:text-white transition-all flex items-center justify-center">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -258,7 +262,10 @@ export default function Home() {
               <h4 className="font-bold text-white mb-8 uppercase tracking-[0.2em] text-xs font-sans">Collaborate</h4>
               <div className="bg-slate-900/50 p-6 rounded-3xl border border-slate-800">
                 <p className="text-xs text-slate-400 mb-6 uppercase tracking-wider font-sans">Interested in working together?</p>
-                <a href="mailto:halo@dolanyok.com" className="w-full block py-3 bg-[#00f7a7] text-[#06373a] font-black text-xs text-center rounded-xl hover:scale-105 transition-all tracking-[0.2em] font-sans uppercase">SEND MESSAGE</a>
+                <a href="mailto:halo@dolanyok.com" className="w-full block py-3 bg-[#00f7a7] text-[#06373a] font-black text-xs text-center rounded-xl hover:scale-105 transition-all tracking-[0.2em] font-sans uppercase flex items-center justify-center gap-2">
+                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                   SEND MESSAGE
+                </a>
               </div>
             </div>
           </div>
