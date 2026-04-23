@@ -20,8 +20,8 @@ export default function Services() {
         {
       id: "03",
       title: "Event & Activation",
-      desc: "Kami membantu merancang dan meliput aktivasi offline untuk brand Anda, mulai dari Grand Opening, Gathering Komunitas, hingga City Activation.",
-      features: ["Live Coverage", "Press Release", "Influencer Gathering"],
+      desc: "Kami meliput aktivasi offline untuk brand Anda, mulai dari Grand Opening, Gathering Komunitas, hingga City Activation.",
+      features: ["Live Coverage", "Influencer Gathering"],
       icon: "📍"
     },
   ];
@@ -102,7 +102,7 @@ export default function Services() {
                 <p className="text-slate-400">Mari kolaborasikan visi Anda dengan kreativitas media kami.</p>
               </div>
               <a href="#kontak" className="px-10 py-4 bg-[#00f7a7] text-[#06373a] font-black rounded-2xl hover:scale-105 transition-transform shadow-[0_0_20px_rgba(0,247,167,0.3)]">
-                BOOKING NOW
+                SEND MASSAGE
               </a>
            </div>
         </div>
