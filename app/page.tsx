@@ -28,6 +28,8 @@ export default function Home() {
     "/dyg.png",
     "/footage/ft1.jpg", 
     "/footage/ft2.jpeg",
+    "/footage/ft3.jpeg",
+    "/footage/ft4.jpeg",
     "/footage/ft5.jpg",      
   ];
 
