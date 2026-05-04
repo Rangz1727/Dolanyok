@@ -8,7 +8,7 @@ const PORTFOLIO_DATA = [
     category: "Kuliner", 
     title: "Rumah Produksi Pie Nikmat di Surabaya", 
     img: "/porto/pie.png", 
-    video: "/porto/hightlight/pie.mp4", // Path ke file video .mp4
+    video: "/porto/hightlight/Pie.mp4", // Path ke file video .mp4
     stats: "450k Views",
     link: "https://www.instagram.com/reel/DV-pVD8CWgx/" 
   },
@@ -44,7 +44,7 @@ const PORTFOLIO_DATA = [
     category: "Kuliner", 
     title: "Bakso gerobakan pinggir jalan tapi yang beli sampek antri antri", 
     img: "/porto/bakso.png", 
-    video: "/porto/hightlight/bakso.mp4",
+    video: "/porto/hightlight/Bakso.mp4",
     stats: "85k Likes",
     link: "https://www.instagram.com/reel/DWVScftTXxn/" 
   },
