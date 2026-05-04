@@ -28,7 +28,7 @@ export default function Home() {
     "/DOLANYOKGROUP.PNG",
     "/footage/ft1.jpg", 
     "/footage/ft2.jpeg",
-    "/footage/ft5.jpg"      
+    "/footage/ft5.jpg",      
   ];
 
   useEffect(() => {
