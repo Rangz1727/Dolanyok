@@ -24,12 +24,11 @@ export default function PhotoSlider() {
     { id: 19, src: "/brand/1 (10).PNG" },
     { id: 20, src: "/brand/1 (10).jpg" },
     { id: 21, src: "/brand/1 (11).PNG" },
-    { id: 22, src: "/brand/1 (11).JPG" },
-    { id: 23, src: "/brand/1 (12).PNG" },
-    { id: 24, src: "/brand/1 (13).PNG" },
-    { id: 25, src: "/brand/1 (14).PNG" },
-    { id: 26, src: "/brand/1 (15).PNG" },
-    { id: 27, src: "/brand/1 (16).PNG" },
+    { id: 22, src: "/brand/1 (12).PNG" },
+    { id: 23, src: "/brand/1 (13).PNG" },
+    { id: 24, src: "/brand/1 (14).PNG" },
+    { id: 25, src: "/brand/1 (15).PNG" },
+    { id: 26, src: "/brand/1 (16).PNG" },
 
   
   ];
