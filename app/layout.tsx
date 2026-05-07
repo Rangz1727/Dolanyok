@@ -20,6 +20,10 @@ const glacial = localFont({
 export const metadata: Metadata = {
   title: "Dolan Yok Group",
   description: "Digital Media & City Guide",
+  // Penambahan kode verifikasi Google Search Console yang kamu kirim
+  verification: {
+    google: "XG2djm432iNq4gTcw6B60AZuV4JBZ2gP482srxIVBcs",
+  },
 };
 
 export default function RootLayout({
